@@ -6,10 +6,10 @@ public class User {
     private String email;
 
     // Constructor
-    public User(String name, String email, int id) {
+    public User(int id, String name, String email) {
+        this.id = id;
         this.name = name;
         this.email = email;
-        this.id = id;
     }
 
     // Getters & setters

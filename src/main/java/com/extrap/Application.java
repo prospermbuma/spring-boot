@@ -23,13 +23,13 @@ public class Application {
     # Endpoint: /api/greeting
     # Description: Get a greeting
     ===============================================*/
-    @GetMapping("/api/greeting")
+    @GetMapping("/greeting")
     public String greeting() {
         return "Hello World";
     }
 
     // In-memory user store
-    private List<User> users = new ArrayList<>();
+    private final List<User> users = new ArrayList<>();
 
     /*===============================================
     # Method: Get
@@ -59,8 +59,11 @@ public class Application {
     # Endpoint: /api/users
     # Description: Create a new user
     ===============================================*/
+    private int nextId = 1;
+
     @PostMapping
     public User createUser(@RequestBody User newUser) {
+        newUser.setId(nextId++);
         users.add(newUser);
         return newUser;
     }

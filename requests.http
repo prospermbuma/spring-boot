@@ -1,2 +1,14 @@
-### Endpoint: /
-GET http://localhost:8080/
+### Greeting
+GET http://localhost:8080/api/users/greeting
+
+### Get all users
+GET http://localhost:8080/api/users
+
+### Create a new user
+POST http://localhost:8080/api/users
+Content-Type: application/json
+
+{
+  "name": "Johnnny Doe",
+  "email": "jane.doe@example.com"
+}
