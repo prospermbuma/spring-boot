@@ -18,18 +18,23 @@ public class Application {
 
     // RestAPI
 
-    /*===============================================
-    # Method: Get
-    # Endpoint: /api/greeting
-    # Description: Get a greeting
-    ===============================================*/
-    @GetMapping("/greeting")
-    public String greeting() {
-        return "Hello World";
-    }
-
     // In-memory user store
     private final List<User> users = new ArrayList<>();
+
+    /*===============================================
+  # Method: Get
+  # Endpoint: /api/greeting
+  # Description: Get a greeting
+  ===============================================*/
+    @GetMapping("/greeting/{name}")
+    public String greeting(@PathVariable String name) {
+        for (User user : users) {
+            if (user.getName().equalsIgnoreCase(name)) {
+                return "Hello " + user.getName();
+            }
+        }
+        return "User not found: " + name;
+    }
 
     /*===============================================
     # Method: Get
@@ -73,7 +78,7 @@ public class Application {
     # Endpoint: /api/users/{id}
     # Description: Update a user
     ===============================================*/
-    @PostMapping("/{id}")
+    @PutMapping("/{id}")
     public User updateUser(@PathVariable int id, @RequestBody User updatedUser) {
         for (int i = 0; i < users.size(); i++) {
             if (users.get(i).getId() == id) {
