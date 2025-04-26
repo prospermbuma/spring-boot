@@ -22,10 +22,10 @@ public class Application {
     private final List<User> users = new ArrayList<>();
 
     /*===============================================
-  # Method: Get
-  # Endpoint: /api/greeting
-  # Description: Get a greeting
-  ===============================================*/
+    # Method: Get
+    # Endpoint: /api/greeting
+    # Description: Get a greeting
+    ===============================================*/
     @GetMapping("/greeting/{name}")
     public String greeting(@PathVariable String name) {
         for (User user : users) {

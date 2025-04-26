@@ -1,12 +1,15 @@
 package com.extrap;
 
 public class User {
-    private int id;
-    private String name;
-    private String email;
+    protected Integer id;
+    protected String name;
+    protected String email;
 
-    // Constructor
-    public User(int id, String name, String email) {
+    // Constructors
+    public User() {
+    }
+
+    public User(Integer id, String name, String email) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -32,7 +35,8 @@ public class User {
     public int getId() {
         return id;
     }
-    public void setId(int id) {
+
+    public void setId(Integer id) {
         this.id = id;
     }
 }
