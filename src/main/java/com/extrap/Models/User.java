@@ -1,8 +1,13 @@
 package com.extrap.Models;
 
+import jakarta.persistence.Id;
+import jakarta.persistence.MappedSuperclass;
+
 import java.util.Objects;
 
+@MappedSuperclass
 public class User {
+    @Id
     protected Integer id;
     protected String name;
     protected String email;
@@ -18,6 +23,14 @@ public class User {
     }
 
     // Getters & setters
+    public int getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
     public String getName() {
         return name;
     }
@@ -32,14 +45,6 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
     // equals() and hashCode()
