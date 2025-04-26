@@ -25,3 +25,6 @@ Content-Type: application/json
 
 ### Delete a user
 DELETE http://localhost:8080/api/users/4
+
+### Get Engineers
+GET http://localhost:8080/api/software-engineers
