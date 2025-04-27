@@ -26,5 +26,15 @@ Content-Type: application/json
 ### Delete a user
 DELETE http://localhost:8080/api/users/4
 
-### Get Engineers
+### Get all Software Engineers
 GET http://localhost:8080/api/software-engineers
+
+### Create ne Software Engineer
+POST http://localhost:8080/api/software-engineers
+Content-Type: application/json
+
+{
+  "email": "annah.john@extrap.co.tz",
+  "name": "Annah Jongo",
+  "techStack": "Flutter, Dart, Supabase, Postgres"
+}

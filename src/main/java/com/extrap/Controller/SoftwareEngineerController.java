@@ -3,9 +3,7 @@ package com.extrap.Controller;
 import com.extrap.Model.SoftwareEngineer;
 import com.extrap.Service.SoftwareEngineerService;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -21,6 +19,11 @@ public class SoftwareEngineerController {
 
     @GetMapping
     public List<SoftwareEngineer> getSoftwareEngineers() {
-        return softwareEngineerService.getSoftwareEngineers();
+        return softwareEngineerService.getAllSoftwareEngineers();
+    }
+
+    @PostMapping
+    public void addNewSoftwareEngineer(@RequestBody SoftwareEngineer softwareEngineer) {
+        softwareEngineerService.insertSoftwareEngineer(softwareEngineer);
     }
 }
