@@ -1,12 +1,10 @@
 package com.extrap.Controller;
 
 import com.extrap.Model.User;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
 
-@Controller
 @RestController
 @RequestMapping("/api/users")
 public class UserController {

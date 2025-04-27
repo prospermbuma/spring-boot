@@ -3,13 +3,11 @@ package com.extrap.Controller;
 import com.extrap.Model.SoftwareEngineer;
 import com.extrap.Service.SoftwareEngineerService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
 
-@Controller
 @RestController
 @RequestMapping("/api/software-engineers")
 public class SoftwareEngineerController {
