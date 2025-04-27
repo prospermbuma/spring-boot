@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Extrap</title>
+</head>
+<body>
+<h1>Software Engineers</h1>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Tech Stack</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="engineer : ${softwareEngineers}">
+        <td th:text="${engineer.id}"></td>
+        <td th:text="${engineer.name}"></td>
+        <td th:text="${engineer.email}"></td>
+        <td th:text="${engineer.techStack}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
