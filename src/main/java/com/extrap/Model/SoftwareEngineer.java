@@ -1,4 +1,4 @@
-package com.extrap.Models;
+package com.extrap.Model;
 
 import jakarta.persistence.Entity;
 
