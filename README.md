@@ -1,5 +1,5 @@
 # Spring Boot CRUD API
-- CRUD API - Software Engineer Database.
+- CRUD API - Software Engineers Database.
 - Accessing and manipulating data of user software engineer.
 - Database: PostgreSQL
 - Backend TechStack: Spring Boot (Java)
